@@ -9,6 +9,14 @@
 
 |pypi| |docs| |travis| |doi| |contributors| |codacy-quality| |codecov|
 
+Some small changes to `gnpy`:
+-----------------------------
+- Added a new script in tools to run multiple service requests together.
+- This is transmission main example in a for loop.
+- Also added a script to convert my own datatype storage method into gnpy compliant jsons
+- Visit PhyNWInfo [https://github.com/SaiPatri/PhyNWInfo] for more details on my datatypes
+
+
 **`gnpy` is an open-source, community-developed library for building route
 planning and optimization tools in real-world mesh optical networks.**
 

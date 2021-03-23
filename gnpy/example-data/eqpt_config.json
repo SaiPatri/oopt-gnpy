@@ -6,7 +6,7 @@
             "p_max": 21,
             "advanced_config_from_json": "std_medium_gain_advanced_config.json",
             "out_voa_auto": false,
-            "allowed_for_design": false
+            "allowed_for_design": true
             },                  {
             "type_variety": "Juniper_BoosterHG",
             "type_def": "advanced_model",
@@ -16,7 +16,7 @@
             "advanced_config_from_json": "Juniper-BoosterHG.json",
             "out_voa_auto": false,
             "allowed_for_design": false
-            }, 
+            },
             {
             "type_variety": "operator_model_example",
             "type_def": "variable_gain",
@@ -26,7 +26,7 @@
             "nf_min": 6,
             "nf_max": 10,
             "out_voa_auto": false,
-            "allowed_for_design": false           
+            "allowed_for_design": true
             },
             {
             "type_variety": "low_noise",
@@ -35,8 +35,8 @@
             "gain_min": 12,
             "p_max": 22,
             "nf_coef": [-8.104e-4,-6.221e-2,-5.889e-1,37.62],
-            "allowed_for_design": false
-            },          
+            "allowed_for_design": true
+            },
             {
             "type_variety": "standard",
             "type_def": "openroadm",
@@ -44,7 +44,7 @@
             "gain_min": 12,
             "p_max": 22,
             "nf_coef": [-5.952e-4,-6.250e-2,-1.071,28.99],
-            "allowed_for_design": false
+            "allowed_for_design": true
             },
             {
             "type_variety": "std_high_gain",
@@ -56,7 +56,7 @@
             "nf_max": 7,
             "out_voa_auto": false,
             "allowed_for_design": true
-            },            
+            },
             {
             "type_variety": "std_medium_gain",
             "type_def": "variable_gain",
@@ -88,8 +88,8 @@
             "nf_min": 9,
             "nf_max": 15,
             "out_voa_auto": false,
-            "allowed_for_design": false
-            },            
+            "allowed_for_design": true
+            },
             {
             "type_variety": "std_fixed_gain",
             "type_def": "fixed_gain",
@@ -97,7 +97,7 @@
             "gain_min": 20,
             "p_max": 21,
             "nf0": 5.5,
-            "allowed_for_design": false
+            "allowed_for_design": true
             },
             {
             "type_variety": "4pumps_raman",
@@ -107,7 +107,7 @@
             "p_max": 21,
             "nf0": -1,
             "allowed_for_design": false
-            },   
+            },
             {
             "type_variety": "hybrid_4pumps_lowgain",
             "type_def": "dual_stage",
@@ -125,7 +125,7 @@
             "preamp_variety": "4pumps_raman",
             "booster_variety": "std_medium_gain",
             "allowed_for_design": true
-            },            
+            },
             {
             "type_variety": "medium+low_gain",
             "type_def": "dual_stage",
@@ -140,8 +140,8 @@
             "gain_min": 25,
             "preamp_variety": "std_medium_gain",
             "booster_variety": "high_power",
-            "allowed_for_design": false
-            }                                  
+            "allowed_for_design": true
+            }
       ],
       "Fiber":[{
             "type_variety": "SSMF",
@@ -195,12 +195,12 @@
       ],
       "Span":[{
             "power_mode":true,
-            "delta_power_range_db": [-2,3,0.5],
+            "delta_power_range_db": [-2,4,0.25],
             "max_fiber_lineic_loss_for_raman": 0.25,
             "target_extended_gain": 2.5,
             "max_length": 150,
             "length_units": "km",
-            "max_loss": 28,
+            "max_loss": 31,
             "padding": 10,
             "EOL": 0,
             "con_in": 0,
@@ -220,12 +220,12 @@
             "f_min": 191.3e12,
             "baud_rate": 32e9,
             "f_max":195.1e12,
-            "spacing": 50e9,
+            "spacing": 12e9,
             "power_dbm": 0,
             "power_range_db": [0,0,1],
             "roll_off": 0.15,
             "tx_osnr": 40,
-            "sys_margins": 2
+            "sys_margins": 1
             }],
       "Transceiver":[
             {
@@ -306,6 +306,994 @@
                        "cost":1
                        }
                    ]
+            },
+            {
+              "type_variety": "adhoc",
+              "frequency":{
+                        "min": 191.35e12,
+                        "max": 196.1e12
+                        },
+              "mode":[
+                       {
+                        "format": "mode 1",
+                        "bit_rate": 628e9,
+                        "baud_rate": 69e9,
+                        "min_spacing": 75e9,
+                        "tx_osnr": 40,
+                        "roll_off": 0.15,
+                        "OSNR": 30.0,
+                        "cost": 1
+                       },
+                       {
+                       "format": "mode 2",
+                       "bit_rate": 629e9,
+                       "baud_rate": 58e9,
+                       "min_spacing": 62.5e9,
+                       "tx_osnr": 40,
+                       "roll_off": 0.15,
+                       "OSNR": 31.5,
+                       "cost": 1
+                       },
+                       {
+                       "format": "mode 3",
+                       "bit_rate": 577e9,
+                       "baud_rate": 53e9,
+                       "min_spacing": 62.5e9,
+                       "tx_osnr": 40,
+                       "roll_off": 0.15,
+                       "OSNR": 30.0,
+                       "cost": 1
+                       },
+                       {
+                       "format": "mode 4",
+                       "bit_rate": 362e9,
+                       "baud_rate": 75e9,
+                       "min_spacing": 87.5e9,
+                       "tx_osnr": 40,
+                       "roll_off": 0.15,
+                       "OSNR": 19.2,
+                       "cost": 1
+                       },
+                       {
+                       "format": "mode 5",
+                       "bit_rate": 577e9,
+                       "baud_rate": 63e9,
+                       "min_spacing": 75.0e9,
+                       "tx_osnr": 40,
+                       "roll_off": 0.15,
+                       "OSNR": 29.0,
+                       "cost": 1
+                       },
+                       {
+                       "format": "mode 6",
+                       "bit_rate": 524e9,
+                       "baud_rate": 48e9,
+                       "min_spacing": 62.5e9,
+                       "tx_osnr": 40,
+                       "roll_off": 0.15,
+                       "OSNR": 29.1,
+                       "cost": 1
+                       },
+                      {
+                      "format": "mode 7",
+                      "bit_rate": 524e9,
+                      "baud_rate": 58e9,
+                      "min_spacing": 62.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 26.6,
+                      "cost": 1
+                      },
+                     {
+                     "format": "mode 8",
+                     "bit_rate": 472e9,
+                     "baud_rate": 48e9,
+                     "min_spacing": 62.5e9,
+                     "tx_osnr": 40,
+                     "roll_off": 0.15,
+                     "OSNR": 27.1,
+                     "cost": 1
+                     },
+                    {
+                      "format": "mode 9",
+                      "bit_rate": 105e9,
+                      "baud_rate": 21e9,
+                      "min_spacing": 25e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 13.5,
+                      "cost": 1
+                      },
+                    {
+                      "format": "mode 10",
+                      "bit_rate": 577e9,
+                      "baud_rate": 79e9,
+                      "min_spacing": 87.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 28.0,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 11",
+                      "bit_rate": 524e9,
+                      "baud_rate": 72e9,
+                      "min_spacing": 87.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 25.0,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 12",
+                      "bit_rate": 472.5e9,
+                      "baud_rate": 58e9,
+                      "min_spacing": 62.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 25.0,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 13",
+                      "bit_rate": 472.5e9,
+                      "baud_rate": 72e9,
+                      "min_spacing": 87.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 24.5,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 14",
+                      "bit_rate": 419e9,
+                      "baud_rate": 42.7e9,
+                      "min_spacing": 50e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 27.1,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 15",
+                      "bit_rate": 419e9,
+                      "baud_rate": 51e9,
+                      "min_spacing": 62.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 24.0,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 16",
+                      "bit_rate": 419e9,
+                      "baud_rate": 64e9,
+                      "min_spacing": 75e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 21.4,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 17",
+                      "bit_rate": 362e9,
+                      "baud_rate": 37e9,
+                      "min_spacing": 50e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 26.0,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 18",
+                      "bit_rate": 157e9,
+                      "baud_rate": 24e9,
+                      "min_spacing": 37.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 14.1,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 19",
+                      "bit_rate": 362e9,
+                      "baud_rate": 45e9,
+                      "min_spacing": 50e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 23.1,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 20",
+                      "bit_rate": 362e9,
+                      "baud_rate": 56e9,
+                      "min_spacing": 62.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 20.5,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 21",
+                      "bit_rate": 314e9,
+                      "baud_rate": 32e9,
+                      "min_spacing": 37.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 25.0,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 22",
+                      "bit_rate": 314e9,
+                      "baud_rate": 38e9,
+                      "min_spacing": 50e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 22.4,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 23",
+                      "bit_rate": 314e9,
+                      "baud_rate": 48e9,
+                      "min_spacing": 62.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 19.6,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 24",
+                      "bit_rate": 314e9,
+                      "baud_rate": 64e9,
+                      "min_spacing": 75e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 18.1,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 25",
+                      "bit_rate": 262e9,
+                      "baud_rate": 32e9,
+                      "min_spacing": 37.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 19.8,
+                      "cost": 1
+                    },
+                    {
+                      "format": "most 26",
+                      "bit_rate": 262e9,
+                      "baud_rate": 40e9,
+                      "min_spacing": 50e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 18.4,
+                      "cost": 1
+                    },
+                    {
+                      "format": "most 27",
+                      "bit_rate": 209e9,
+                      "baud_rate": 26e9,
+                      "min_spacing": 37.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 18.6,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 28",
+                      "bit_rate": 262e9,
+                      "baud_rate": 53e9,
+                      "min_spacing": 62.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 17.0,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 29",
+                      "bit_rate": 209e9,
+                      "baud_rate": 32e9,
+                      "min_spacing": 37.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 17.2,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 30",
+                      "bit_rate": 209e9,
+                      "baud_rate": 43e9,
+                      "min_spacing": 50e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 15.7,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 31",
+                      "bit_rate": 209e9,
+                      "baud_rate": 64e9,
+                      "min_spacing": 75e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 13.6,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 32",
+                      "bit_rate": 157e9,
+                      "baud_rate": 32e9,
+                      "min_spacing": 37.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 13.5,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 33",
+                      "bit_rate": 157e9,
+                      "baud_rate": 48e9,
+                      "min_spacing": 62.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 12.2,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 34",
+                      "bit_rate": 105e9,
+                      "baud_rate": 32e9,
+                      "min_spacing": 37.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 10.5,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 35",
+                      "bit_rate": 262e9,
+                      "baud_rate": 26.7e9,
+                      "min_spacing": 37.5e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 25.0,
+                      "cost": 1
+                    },
+                    {
+                      "format": "mode 36",
+                      "bit_rate": 209e9,
+                      "baud_rate": 21e9,
+                      "min_spacing": 25e9,
+                      "tx_osnr": 40,
+                      "roll_off": 0.15,
+                      "OSNR": 19.8,
+                      "cost": 1
+                    },
+					{
+						"format": "mode 37",
+						"bit_rate": 600e9,
+						"baud_rate": 63e9,
+						"min_spacing": 75e9,
+						"OSNR": 32.6,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 38",
+						"bit_rate": 600e9,
+						"baud_rate": 72e9,
+						"min_spacing": 87.5e9,
+						"OSNR": 31.5,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 39",
+						"bit_rate": 600e9,
+						"baud_rate": 68e9,
+						"min_spacing": 87.5e9,
+						"OSNR": 31.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 40",
+						"bit_rate": 550e9,
+						"baud_rate": 63e9,
+						"min_spacing": 75e9,
+						"OSNR": 32.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 41",
+						"bit_rate": 550e9,
+						"baud_rate": 57.75e9,
+						"min_spacing": 75e9,
+						"OSNR": 32.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 42",
+						"bit_rate": 550e9,
+						"baud_rate": 66e9,
+						"min_spacing": 87.5e9,
+						"OSNR": 31.3,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 43",
+						"bit_rate": 550e9,
+						"baud_rate": 64e9,
+						"min_spacing": 87.5e9,
+						"OSNR": 30.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 44",
+						"bit_rate": 550e9,
+						"baud_rate": 86.625e9,
+						"min_spacing": 100e9,
+						"OSNR": 29.4,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 45",
+						"bit_rate": 500e9,
+						"baud_rate": 47e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 29.1,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 46",
+						"bit_rate": 500e9,
+						"baud_rate": 52.3972e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 26.6,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 47",
+						"bit_rate": 500e9,
+						"baud_rate": 54e9,
+						"min_spacing": 75.0e9,
+						"OSNR": 26.6,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 48",
+						"bit_rate": 500e9,
+						"baud_rate": 57e9,
+						"min_spacing": 75e9,
+						"OSNR": 26.8,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 49",
+						"bit_rate": 500e9,
+						"baud_rate": 63e9,
+						"min_spacing": 75e9,
+						"OSNR": 27.1,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 50",
+						"bit_rate": 500e9,
+						"baud_rate": 63e9,
+						"min_spacing": 87.5e9,
+						"OSNR": 25.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 51",
+						"bit_rate": 450e9,
+						"baud_rate": 73e9,
+						"min_spacing": 100e9,
+						"OSNR": 18.1,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 52",
+						"bit_rate": 450e9,
+						"baud_rate": 64e9,
+						"min_spacing": 87.5e9,
+						"OSNR": 24.5,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 53",
+						"bit_rate": 450e9,
+						"baud_rate": 49e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 24.5,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 54",
+						"bit_rate": 450e9,
+						"baud_rate": 46.67e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 25.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 55",
+						"bit_rate": 450e9,
+						"baud_rate": 47.25e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 27.1,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 56",
+						"bit_rate": 450e9,
+						"baud_rate": 65.205e9,
+						"min_spacing": 75e9,
+						"OSNR": 26.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 57",
+						"bit_rate": 400e9,
+						"baud_rate": 76e9,
+						"min_spacing": 100e9,
+						"OSNR": 25.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 58",
+						"bit_rate": 400e9,
+						"baud_rate": 65e9,
+						"min_spacing": 87.5e9,
+						"OSNR": 13.6,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 59",
+						"bit_rate": 400e9,
+						"baud_rate": 57e9,
+						"min_spacing": 75e9,
+						"OSNR": 21.4,
+						"roll_off": 0.15,
+						"tx_osnr": 40
+					},
+					{
+						"format": "mode 60",
+						"bit_rate": 400e9,
+						"baud_rate": 50.6e9,
+						"min_spacing": 75e9,
+						"OSNR": 22.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 61",
+						"bit_rate": 400e9,
+						"baud_rate": 38e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 26.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 62",
+						"bit_rate": 400e9,
+						"baud_rate": 43.29e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 25.1,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 63",
+						"bit_rate": 400e9,
+						"baud_rate": 45.548e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 24.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 64",
+						"bit_rate": 400e9,
+						"baud_rate": 37.95e9,
+						"min_spacing": 50e9,
+						"OSNR": 27.1,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 65",
+						"bit_rate": 400e9,
+						"baud_rate": 71.859e9,
+						"min_spacing": 87.5e9,
+						"OSNR": 13.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 66",
+						"bit_rate": 400e9,
+						"baud_rate": 45.548e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 22.6,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 67",
+						"bit_rate": 400e9,
+						"baud_rate": 56.935e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 21.4,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 68",
+						"bit_rate": 400e9,
+						"baud_rate": 41.91e9,
+						"min_spacing": 50e9,
+						"OSNR": 27.9,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 69",
+						"bit_rate": 350e9,
+						"baud_rate": 65e9,
+						"min_spacing": 87.5e9,
+						"OSNR": 13.6,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 70",
+						"bit_rate": 350e9,
+						"baud_rate": 56e9,
+						"min_spacing": 75e9,
+						"OSNR": 14.5,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 71",
+						"bit_rate": 350e9,
+						"baud_rate": 49e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 16.8,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 72",
+						"bit_rate": 350e9,
+						"baud_rate": 43.7e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 17.2,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 73",
+						"bit_rate": 350e9,
+						"baud_rate": 32.77e9,
+						"min_spacing": 50e9,
+						"OSNR": 27.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 74",
+						"bit_rate": 350e9,
+						"baud_rate": 35.75e9,
+						"min_spacing": 50e9,
+						"OSNR": 26.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 75",
+						"bit_rate": 350e9,
+						"baud_rate": 37e9,
+						"min_spacing": 50e9,
+						"OSNR": 23.1,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 76",
+						"bit_rate": 350e9,
+						"baud_rate": 39e9,
+						"min_spacing": 50e9,
+						"OSNR": 22.8,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 77",
+						"bit_rate": 350e9,
+						"baud_rate": 54e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 20.5,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 78",
+						"bit_rate": 350e9,
+						"baud_rate": 72e9,
+						"min_spacing": 87.5e9,
+						"OSNR": 19.2,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 79",
+						"bit_rate": 300e9,
+						"baud_rate": 31e9,
+						"min_spacing": 50e9,
+						"OSNR": 25.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 80",
+						"bit_rate": 300e9,
+						"baud_rate": 32.47e9,
+						"min_spacing": 50e9,
+						"OSNR": 23.8,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 81",
+						"bit_rate": 300e9,
+						"baud_rate": 34e9,
+						"min_spacing": 50e9,
+						"OSNR": 22.4,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 82",
+						"bit_rate": 300e9,
+						"baud_rate": 37.95e9,
+						"min_spacing": 50e9,
+						"OSNR": 22.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 83",
+						"bit_rate": 300e9,
+						"baud_rate": 42.7e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 19.6,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 84",
+						"bit_rate": 300e9,
+						"baud_rate": 48.8e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 18.8,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 85",
+						"bit_rate": 300e9,
+						"baud_rate": 56.9e9,
+						"min_spacing": 75e9,
+						"OSNR": 18.1,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 86",
+						"bit_rate": 250e9,
+						"baud_rate": 23.7e9,
+						"min_spacing": 37.5e9,
+						"OSNR": 19.8,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 87",
+						"bit_rate": 250e9,
+						"baud_rate": 28.467e9,
+						"min_spacing": 37.5e9,
+						"OSNR": 22.4,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 88",
+						"bit_rate": 250e9,
+						"baud_rate": 31.63e9,
+						"min_spacing": 50e9,
+						"OSNR": 18.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 89",
+						"bit_rate": 250e9,
+						"baud_rate": 35.58e9,
+						"min_spacing": 50e9,
+						"OSNR": 17.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 90",
+						"bit_rate": 250e9,
+						"baud_rate": 47e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 25.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 91",
+						"bit_rate": 200e9,
+						"baud_rate": 20.95e9,
+						"min_spacing": 25e9,
+						"OSNR": 18.4,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 92",
+						"bit_rate": 200e9,
+						"baud_rate": 25e9,
+						"min_spacing": 37.5e9,
+						"OSNR": 19.6,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 93",
+						"bit_rate": 200e9,
+						"baud_rate": 28.46e9,
+						"min_spacing": 37.5e9,
+						"OSNR": 15.7,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 94",
+						"bit_rate": 200e9,
+						"baud_rate": 37.957e9,
+						"min_spacing": 50e9,
+						"OSNR": 13.6,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 95",
+						"bit_rate": 200e9,
+						"baud_rate": 56.935e9,
+						"min_spacing": 75e9,
+						"OSNR": 19.8,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 96",
+						"bit_rate": 150e9,
+						"baud_rate": 42.70e9,
+						"min_spacing": 62.5e9,
+						"OSNR": 17.0,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 97",
+						"bit_rate": 150e9,
+						"baud_rate": 31e9,
+						"min_spacing": 37.5e9,
+						"OSNR": 13.3,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					},
+					{
+						"format": "mode 98",
+						"bit_rate": 100e9,
+						"baud_rate": 29.9e9,
+						"min_spacing": 50e9,
+						"OSNR": 10.5,
+						"roll_off": 0.15,
+						"tx_osnr": 40,
+						"cost": 1
+					}
+              ]
             }
       ]
 
